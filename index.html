@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فحص بوكسيات الألياف البصرية الجديدة | Super Connexion</title>
+<meta name="description" content="أداة فحص أرقام بوكسيات (ODB) الألياف البصرية الجديدة لشبكة موبايلي - Super Connexion">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="card">
+
+      <div class="card__header">
+        <img src="assets/logo.jpg" alt="Super Connexion">
+        <span class="eyebrow">ODB LOOKUP · MOBILY NETWORK</span>
+        <h1>فحص بوكسيات الألياف البصرية الجديدة</h1>
+        <p>ادخل رقم البوكس وتأكد فوراً إذا كان مُسجّلاً كبوكس جديد</p>
+      </div>
+
+      <div class="card__body">
+
+        <div class="fiber-rail" id="fiberRail">
+          <div class="fiber-rail__track">
+            <span class="fiber-rail__pulse"></span>
+            <span class="fiber-rail__node" id="fiberNode"></span>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <input
+            type="text"
+            id="boxInput"
+            placeholder="مثال: JED-MHDY-OBHR-05-2651"
+            autocomplete="off"
+            autocapitalize="characters"
+            spellcheck="false"
+          >
+          <button id="checkBtn" type="button">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2.2"/>
+              <path d="M20 20L16.5 16.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+            <span>بحث</span>
+          </button>
+        </div>
+
+        <div class="result" id="result">
+          <div class="result__inner">
+            <div class="result__icon" id="resultIcon"></div>
+            <div class="result__title" id="resultTitle"></div>
+            <div class="result__code" id="resultCode"></div>
+          </div>
+        </div>
+
+        <div class="meta-row">
+          <span>إجمالي البوكسيات المسجّلة:</span>
+          <strong id="totalCount">0</strong>
+          <span class="dot-sep"></span>
+          <span>تحديث القاعدة: تلقائي عند رفع <code style="direction:ltr">data.js</code></span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer">Super Connexion © جميع الحقوق محفوظة</div>
+  </div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
